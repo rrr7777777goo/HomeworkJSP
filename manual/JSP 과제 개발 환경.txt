@@ -1,0 +1,32 @@
+프로젝트 개발 도구
+IntelliJ IDEA Ultimate 2023.3.6
+DBeaver 24.0.1
+
+프로젝트 생성 환경
+New Project : Java Enterprise 
+Template : Web application
+Application server : Tomcat 8.5
+Language : Java
+Build System : Maven
+JDK : JDK 1.8
+
+사용한 외부 라이브러리
+org.json (HomeworkJSP\src\main\webapp\WEB-INF\lib 경로에 관련 jar 파일 존재)
+sqlite-jdbc (HomeworkJSP\src\main\webapp\WEB-INF\lib 경로에 관련 jar 파일 존재)
+(HomeworkJSP\src\main\resources\apache-tomcat-8.5.100 경로의 lib 안의 jar 파일들)
+Maven: javax.servlet:javax.servlet-api:4.0.1
+Maven: org.apiguardian:apiguardian-api:1.1.2
+Maven: org.junit.jupiter:junit-jupiter-api:5.9.2
+Maven: org.junit:jupiter:junit-jupiter-engine:5.9.2
+Maven: org.junit:platform:junit-platform-commons:1.9.2
+Maven: org.junit:platform:junit-platform-engine:1.9.2
+Maven: org.opentest4j:opentest4j:1.2.0
+
+실행/ 디버그 구성
+Tomcat 8.5.100 (HomeworkJSP\src\main\resources 경로에 apache-tomcat-8.5.100 파일 존재)
+
+사용 DB
+SQLite (SQLite3)
+DB 이름 : wifiDB.db
+JAVA 코드에서 DB를 불러오는 위치 : C:\dev\sqlite3\wifiDB.db
+
