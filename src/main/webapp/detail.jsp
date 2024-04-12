@@ -94,7 +94,7 @@
 <p><a href="/">홈</a> | <a href="/history.jsp">위치 히스토리 목록</a> | <a href="/load-wifi.jsp">Open API 와이파이 정보 가져오기</a> | <a href="/bookmark_list.jsp">북마크 보기</a> | <a href="/bookmark_group.jsp">북마크 그룹 관리</a></p>
 
 <p>
-    <select name="bookmark_group" <% if(currentWifiInformation == null) { out.print("disabled"); } %>>
+    <select name="bookmark_group" onchange="selectName(this.value)" <% if(currentWifiInformation == null) { out.print("disabled"); } %>>
         <option value="">북마크 그룹 이름 선택</option>
         <%
             for(int i = 0; i < li_BookmarkGroup.size(); i++) {
@@ -102,7 +102,7 @@
             }
         %>
     </select>
-    <button type="button" onclick="insertBookmark()" <% if(currentWifiInformation == null) { out.print("disabled"); } %>>북마크 추가하기</button>
+    <button type="button" name="insertButton" onclick="insertBookmark()" disabled>북마크 추가하기</button>
 </p>
 <table>
     <tr>
@@ -182,6 +182,13 @@
         else {
         }
     };
+
+    function selectName(val) {
+        var targetButton = document.getElementsByName("insertButton")[0];
+
+        if(val == "") targetButton.disabled = true;
+        else targetButton.disabled = false;
+    }
 
     var isWork = false;
     function insertBookmark() {
