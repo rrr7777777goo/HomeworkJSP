@@ -10,7 +10,6 @@
     // DB에 UPDATE 작업을 하기 위해서 fetch를 통해 값을 넘겨받는 jsp파일
     // post방식을 이용해서 값을 넘겨받으면 작업이 진행되고 만약 그냥 접속했을 경우에는 백지 화면만 뜬다.
     // 전달 메세지에 문제가 발생할 수 있으므로 위의 page관련 코드는 꼭 저상태로 둔다! (<> 밖에서 엔터키 발생하면 안됨)
-    // ...
 
     InputStream inputStr = request.getInputStream();
     BufferedReader br = new BufferedReader(new InputStreamReader(inputStr));
