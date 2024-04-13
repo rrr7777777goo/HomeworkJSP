@@ -32,9 +32,13 @@
         td {
             border-color:lightgray;
             font-weight: bold;
+            padding-left: 5px;
+            padding-right: 5px;
         }
         td.pgstate0 {
             text-align: center;
+            padding-left: 0px;
+            padding-right: 0px;
         }
         td.even {
             background-color:white;

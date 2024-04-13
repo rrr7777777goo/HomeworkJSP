@@ -33,6 +33,7 @@
             border-color:lightgray;
             font-weight: bold;
             width: 80%;
+            padding-left:10px;
         }
         td.even {
             background-color:white;
@@ -206,11 +207,11 @@
             }).then((response) => response.text()).then(
                 (message) => {
                     if(message == "Insert Complete!") {
-                        alert("Insert가 완료되었습니다.");
+                        alert("현재 와이파이 정보에 대한 북마크 생성이 완료되었습니다.");
                     } else if (message == "Already Insert!") {
-                        alert("해당 북마크에 이미 Insert가 되어있습니다.");
+                        alert("현재 와이파이 정보는 해당 북마크에 이미 들어있습니다.");
                     } else {
-                        alert("Insert 도중 문제가 발생하였습니다.");
+                        alert("북마크 생성 도중 문제가 발생하였습니다.");
                         location.reload(true);
                     }
                     isWork = false;

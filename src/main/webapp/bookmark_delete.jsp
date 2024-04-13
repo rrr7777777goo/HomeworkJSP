@@ -31,12 +31,16 @@
             border-color:lightgray;
             font-weight: bold;
             width: 80%;
+            padding-left:10px;
         }
         td.even {
             background-color:white;
         }
         td.odd {
             background-color:#f1f1f1;
+        }
+        td.pgstate0 {
+            padding-left: 0px;
         }
         div {
             text-align:center;
@@ -79,7 +83,7 @@
         <td class="even"><% out.print(isDisable ? "" : bookmark.getInsertdate()); %></td>
     </tr>
     <tr>
-        <td colspan=2 class="odd pgstate0"><div><a href="javascript:history.go(-1);">돌아가기</a><button type="button" onclick="deleteBookmark()" <% out.print(isDisable ? " disabled" : ""); %>>삭제</button></div></td>
+        <td colspan=2 class="odd pgstate0"><div><a href="javascript:history.go(-1);">돌아가기</a> | <button type="button" onclick="deleteBookmark()" <% out.print(isDisable ? " disabled" : ""); %>>삭제</button></div></td>
     </tr>
 </table>
 <script type="text/javascript">
@@ -109,10 +113,10 @@
                 (message) => {
                     console.log(message);
                     if(message == "Delete Complete!") {
-                        alert("Delete가 완료되었습니다.");
+                        alert("현재 북마크 삭제가 완료되었습니다.");
                         location.replace("/bookmark_list.jsp");
                     } else {
-                        alert("Delete 도중 문제가 발생하였습니다.");
+                        alert("현재 북마크 삭제 도중 문제가 발생하였습니다.");
                         location.reload(true);
                     }
                 }

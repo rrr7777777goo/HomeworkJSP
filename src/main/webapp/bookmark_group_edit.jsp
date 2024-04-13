@@ -30,12 +30,16 @@
             border-color:lightgray;
             font-weight: bold;
             width: 80%;
+            padding-left: 10px;
         }
         td.even {
             background-color:white;
         }
         td.odd {
             background-color:#f1f1f1;
+        }
+        td.pgstate0 {
+            padding-left: 0px;
         }
         div {
             text-align:center;
@@ -74,7 +78,7 @@
         <td class="odd"><input type="text" name="order_bookmark" maxlength="3" value="<% out.print(isDisable ? "" : bookmarkGroupOrder); %>"<% out.print(isDisable ? " disabled" : ""); %> /></td>
     </tr>
     <tr>
-        <td colspan=2 class="even pgstate0"><div><a href="javascript:history.go(-1);">돌아가기</a><button type="button" onclick="updateBookmark()" <% out.print(isDisable ? " disabled" : ""); %>>수정</button></div></td>
+        <td colspan=2 class="even pgstate0"><div><a href="javascript:history.go(-1);">돌아가기</a> | <button type="button" onclick="updateBookmark()" <% out.print(isDisable ? " disabled" : ""); %>>수정</button></div></td>
     </tr>
 </table>
 <script type="text/javascript">

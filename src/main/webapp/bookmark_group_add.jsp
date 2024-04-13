@@ -29,12 +29,16 @@
             border-color:lightgray;
             font-weight: bold;
             width: 80%;
+            padding-left: 10px;
         }
         td.even {
             background-color:white;
         }
         td.odd {
             background-color:#f1f1f1;
+        }
+        td.pgstate0 {
+            padding-left: 0px;
         }
         div {
             text-align:center;
@@ -55,7 +59,7 @@
         <td class="odd"><input type="text" name="order_bookmark" maxlength="3" value=""/></td>
     </tr>
     <tr>
-        <td colspan=2 class="even pgstate0"><div><button type="button" onclick="insertBookmark()">추가</button></div></td>
+        <td colspan=2 class="even pgstate0"><div><a href="javascript:history.go(-1);">돌아가기</a> | <button type="button" onclick="insertBookmark()">추가</button></div></td>
     </tr>
 </table>
 <script type="text/javascript">
@@ -96,7 +100,7 @@
                         (message) => {
                             console.log(message);
                             if(message == "Insert Complete!") {
-                                alert("북마크 그룹 추가가 완료되었습니다.");
+                                alert("새로운 북마크 그룹 추가가 완료되었습니다.");
                                 location.replace("/bookmark_group_edit.jsp?name=" + name_bookmark);
                             } else if (message == "Name is Already In!") {
                                 alert("이미 존재하는 북마크 그룹 이름이라 새로 추가할 수 없습니다. 다른 이름을 입력해주세요.");

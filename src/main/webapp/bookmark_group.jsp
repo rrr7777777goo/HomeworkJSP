@@ -31,15 +31,19 @@
     td {
       border-color:lightgray;
       font-weight: bold;
-    }
-    td.pgstate0 {
-      text-align: center;
+      padding-left: 5px;
+      padding-right: 5px;
     }
     td.even {
       background-color:white;
     }
     td.odd {
       background-color:#f1f1f1;
+    }
+    td.pgstate0 {
+      text-align: center;
+      padding-left:0px;
+      padding-right: 0px;
     }
     div {
       text-align:center;
