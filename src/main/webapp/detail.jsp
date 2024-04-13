@@ -27,10 +27,12 @@
             background-color:#00AA6F;
             border-color:white;
             font-weight: bold;
+            width: 20%;
         }
         td {
             border-color:lightgray;
             font-weight: bold;
+            width: 80%;
             padding-left:10px;
         }
         td.even {

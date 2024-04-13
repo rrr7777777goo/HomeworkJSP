@@ -32,7 +32,6 @@
         td {
             border-color:lightgray;
             font-weight: bold;
-            width: 80%;
             padding-left:5px;
             padding-right:5px;
         }
