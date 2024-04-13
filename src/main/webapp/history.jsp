@@ -28,6 +28,8 @@
             background-color:#00AA6F;
             border-color:white;
             font-weight: bold;
+            padding-left: 5px;
+            padding-right: 5px;
         }
         td {
             border-color:lightgray;
